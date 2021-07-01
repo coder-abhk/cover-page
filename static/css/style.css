@@ -1,0 +1,251 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Poppins";
+}
+
+/* nav section */
+nav {
+  width: 100%;
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background-color: #ffeafe;
+}
+
+nav .left__nav__side>h1 {
+  padding: 1em;
+  font-family: "Amatic Sc" !important;
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: transparent;
+}
+
+nav .right__nav__side {
+  width: 100px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5em;
+  background-color: #000;
+  transition: background-color 300ms;
+}
+
+nav .right__nav__side .line {
+  width: 35px;
+  height: 3px;
+  background-color: #fafafa;
+  transition: transform 300ms ease-in-out;
+}
+
+nav .right__nav__side .line:nth-child(2) {
+  margin-top: 5px;
+}
+
+nav .right__nav__side:active {
+  background-color: #333;
+}
+
+/* end nav section */
+/* main section */
+
+main {
+  width: 100%;
+  height: 382px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #ffecd3;
+  animation: bgColorEffect 8000ms ease-in-out 2000ms infinite;
+}
+
+@keyframes bgColorEffect {
+  20% {
+    background-color: #75cac3;
+  }
+
+  50% {
+    background-color: #5c5c5c;
+  }
+
+  80% {
+    background-color: #f34573;
+  }
+}
+
+#slides {
+  width: 255px;
+  height: 260px;
+  border: 5px solid #fafafa;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: none;
+}
+
+.slide .slide__img {
+  width: 100%;
+  height: 100%;
+  display: none;
+  opacity: 0.75;
+  object-fit: cover;
+  object-position: center;
+  animation: alphaEffect 600ms ease-in-out 1 forwards;
+}
+
+@keyframes alphaEffect {
+  from {
+    opacity: 0.75;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.slide .slide__img.active {
+  display: block;
+}
+
+.main__tag__line {
+  color: #fafafa;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-shadow: -1px 2px 1px rgba(0, 0, 0, 0.7);
+}
+
+#slide__handler__btn {
+  float: right;
+  width: 100px;
+  height: 53px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  transition: opacity 300ms;
+}
+
+#slide__handler__btn:active {
+  opacity: 0.75;
+}
+
+
+
+/*cover section*/
+
+section {
+  margin-top: 5em;
+}
+
+.cover__heading>h2,
+.cover__heading>h1 {
+  font-family: "Amatic Sc" !important;
+}
+
+.cover__heading>h1 {
+  font-size: 64px;
+}
+
+.cover__heading,
+.cover__content {
+  padding: 1em;
+}
+
+.cover__content {
+  background-color: #FFEAFE;
+}
+
+.cover__content>p {
+  color: #777;
+  padding-top: 1em;
+  font-size: 14px;
+  font-weight: 100 !important;
+}
+
+
+.cover__content em {
+  display: inline-block;
+  color: #F34573;
+  margin-top: 1em;
+}
+
+
+/*end cover section*/
+
+
+/*poster*/
+.poster {
+  width: 100%;
+  height: 243px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #FFECD3;
+}
+
+.poster>.label {
+  margin-bottom: .5em;
+  font-size: 48px;
+  font-family: "Amatic Sc" !important;
+}
+
+#cover__your__success__button {
+  width: 327px;
+  height: 88px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000;
+  background-color: #fafafa;
+  transition: background-color 300ms;
+}
+
+
+
+#cover__your__success__button p {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+
+
+#cover__your__success__button p>img {
+  margin-left: 6px;
+}
+
+#cover__your__success__button:hover {
+  background-color: #FFEAFE;
+}
+
+.cover__img {
+  width: 100%;
+  height: 326px;
+}
+
+.cover__img>img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
