@@ -5,7 +5,8 @@
 }
 
 body {
-  font-family: "Poppins";
+  font-family: 'Zen Loop', cursive;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* nav section */
@@ -39,6 +40,10 @@ nav .right__nav__side {
   padding: 1.5em;
   background-color: #000;
   transition: background-color 300ms;
+}
+
+#hamburger {
+  cursor: pointer;
 }
 
 nav .right__nav__side .line {
@@ -141,6 +146,7 @@ main {
   align-items: center;
   background-color: #000;
   transition: opacity 300ms;
+  cursor: pointer;
 }
 
 #slide__handler__btn:active {
@@ -155,9 +161,21 @@ section {
   margin-top: 5em;
 }
 
+.cover__img {
+  width: 100%;
+  height: 326px;
+}
+
+.cover__img>img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
 .cover__heading>h2,
 .cover__heading>h1 {
-  font-family: "Amatic Sc" !important;
+  font-family: 'Nanum Brush Script', cursive !important;
 }
 
 .cover__heading>h1 {
@@ -171,17 +189,18 @@ section {
 .cover__heading {
   padding-top: 1.5em;
   padding-left: 1.5em;
+  margin-bottom: 1em;
+  margin-top: .5em;
 }
 
 .cover__content {
-  background-color: #fff7ff;
+  background-color: #ffeafe;
 }
 
 .cover__content>p {
-  color: #333;
-  font-size: 14px;
-  font-weight: 100;
-  line-height: 28px;
+  color: #000;
+  font-size: 20px;
+  line-height: 30px;
 }
 
 
@@ -189,6 +208,7 @@ section {
   display: inline-block;
   color: #F34573;
   margin-top: .5em;
+  font-weight: bold;
 }
 
 
@@ -218,6 +238,7 @@ section {
   width: 327px;
   height: 88px;
   display: flex;
+  margin-bottom: 1em;
   justify-content: center;
   align-items: center;
   border: 1px solid #000;
@@ -244,14 +265,69 @@ section {
   background-color: #FFEAFE;
 }
 
-.cover__img {
-  width: 100%;
-  height: 326px;
+/*media screen 768px*/
+@media only screen and (min-width: 760px) {
+
+  main {
+    height: 480px;
+  }
+
+  #slides {
+    width: 524px;
+    height: 290px;
+  }
+
+  .main__tag__line {
+    font-size: 64px;
+  }
+
+  .cover__heading {
+    padding-left: 3.5em;
+  }
+
+  .cover__img {
+    width: 100%;
+    height: 480px;
+  }
+
+  .cover__content {
+    padding: 3.5em;
+  }
+
+  .cover__heading>h1 {
+    font-size: 86px;
+  }
+
+  .cover__content>p {
+    font-size: 30px;
+    line-height: 35px;
+  }
 }
 
-.cover__img>img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+/*desktop screen*/
+@media only screen and (min-width: 1024px) {
+  main {
+    height: 545px;
+  }
+
+  #slides {
+    width: 765px;
+  }
+
+  .main__tag__line {
+    font-size: 98px;
+  }
+
+  .cover__img {
+    width: 100%;
+    height: 487px;
+  }
+
+  .cover__content {
+    padding: 5.5em;
+  }
+
+  .cover__heading {
+    padding-left: 5.5em;
+  }
 }
