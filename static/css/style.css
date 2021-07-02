@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Zen Loop', cursive;
+  font-family: "Zen Loop", cursive;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -21,9 +21,9 @@ nav {
 }
 
 nav .left__nav__side>h1 {
-  padding: .65em;
+  padding: 0.65em;
   letter-spacing: 5px;
-  font-family: 'Nanum Brush Script', cursive !important;
+  font-family: "Nanum Brush Script", cursive !important;
   font-size: 38px;
   color: #333;
   text-transform: uppercase;
@@ -153,8 +153,6 @@ main {
   opacity: 0.75;
 }
 
-
-
 /*cover section*/
 
 section {
@@ -175,7 +173,7 @@ section {
 
 .cover__heading>h2,
 .cover__heading>h1 {
-  font-family: 'Nanum Brush Script', cursive !important;
+  font-family: "Nanum Brush Script", cursive !important;
 }
 
 .cover__heading>h1 {
@@ -190,11 +188,15 @@ section {
   padding-top: 1.5em;
   padding-left: 1.5em;
   margin-bottom: 1em;
-  margin-top: .5em;
+  margin-top: 0.5em;
 }
 
 .cover__content {
-  background-color: #fafafa;
+  width: 100%;
+  background-image: url("../images/dot-grid.png");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  overflow: hidden;
 }
 
 .cover__content>p {
@@ -210,18 +212,15 @@ section {
   line-height: 38px;
 }
 
-
 .cover__content em {
   display: inline-block;
-  color: #F34573;
-  margin-top: .5em;
+  color: #f34573;
+  margin-top: 0.5em;
   font-weight: bold;
   font-size: 18px;
 }
 
-
 /*end cover section*/
-
 
 /*poster*/
 .poster {
@@ -231,15 +230,14 @@ section {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #FFECD3;
 }
 
 .poster>.label {
   letter-spacing: 5px;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
   font-size: 48px;
   color: #333;
-  font-family: 'Nanum Brush Script', cursive !important;
+  font-family: "Nanum Brush Script", cursive !important;
 }
 
 #cover__your__success__button {
@@ -255,8 +253,6 @@ section {
   transition: background-color 300ms;
 }
 
-
-
 #cover__your__success__button p {
   display: flex;
   justify-content: center;
@@ -266,19 +262,16 @@ section {
   font-weight: bold;
 }
 
-
-
 #cover__your__success__button p>img {
   margin-left: 6px;
 }
 
 #cover__your__success__button:hover {
-  background-color: #FFEAFE;
+  background-color: #ffecd3;
 }
 
 /*media screen 768px*/
 @media only screen and (min-width: 760px) {
-
   main {
     height: 480px;
   }
