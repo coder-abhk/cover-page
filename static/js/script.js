@@ -40,17 +40,13 @@ hamburger.addEventListener("click", () => {
 	if (isTransformed) {
 		nav__slider.style.opacity = `${1}`;
 		nav__slider.style.marginLeft = `${0}px`;
-		// nav__slider.style.display = "flex";
-		// nav__slider.style.height = `${100}%`;
 		hamburgerLine1.style.transform = `rotate(${45}deg)`;
 		hamburgerLine2.style.transform = `rotate(${-45}deg)`;
 		hamburgerLine2.style.marginTop = `${-3}px`;
 		isTransformed = false;
 	} else {
 		nav__slider.style.opacity = `${0}`;
-		nav__slider.style.marginLeft = `${-10000}px`;
-		// nav__slider.style.display = "none";
-		// nav__slider.style.height = `${0}%`;
+		nav__slider.style.marginLeft = `${-3000}px`;
 		hamburgerLine1.style.transform = `rotate(${0}deg)`;
 		hamburgerLine2.style.transform = `rotate(${0}deg)`;
 		hamburgerLine2.style.marginTop = `${3}px`;
