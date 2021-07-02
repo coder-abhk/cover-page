@@ -213,18 +213,20 @@ section {
 }
 
 .cover__content {
-  padding: 1.5em;
+  padding: 1em;
 }
 
 .cover__heading {
-  padding-top: 1.5em;
-  padding-left: 1.5em;
-  margin-bottom: 1em;
-  margin-top: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2em;
 }
 
 .cover__content {
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
   background-image: url("../images/dot-grid.png");
   background-repeat: repeat;
   background-attachment: fixed;
@@ -331,7 +333,8 @@ section {
   }
 
   .cover__content {
-    padding: 3.5em;
+    width: 75%;
+    margin: 0 auto;
   }
 
   .cover__heading>h1 {
@@ -370,11 +373,7 @@ section {
   }
 
   .cover__content {
-    padding: 5.5em;
-  }
-
-  .cover__heading {
-    padding-left: 5.5em;
+    width: 55%;
   }
 
   .cover__content>p {
