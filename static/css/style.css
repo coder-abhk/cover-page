@@ -107,13 +107,13 @@ main {
 }
 
 #nav__slider>p {
-  padding: .5em 1em;
+  padding: .3em 1.5em;
   cursor: pointer;
-  transition: background-color 300ms;
+  transition: opacity 300ms;
 }
 
 #nav__slider>p:hover {
-  background-color: #070707;
+  opacity: .5;
 }
 
 #nav__slider>p>a {
