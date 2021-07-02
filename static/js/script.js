@@ -13,9 +13,7 @@ function slideHandler() {
 	} else {
 		count += 1;
 	}
-
 	changeSlide();
-
 }
 
 function changeSlide() {
@@ -28,8 +26,6 @@ function changeSlide() {
 setInterval(() => {
 	slideHandler();
 }, 5000)
-
-
 
 slide__handler__btn.addEventListener("click", () => {
 	slideHandler()
@@ -53,3 +49,23 @@ hamburger.addEventListener("click", () => {
 		isTransformed = true;
 	}
 }, false);
+
+
+// images view effect onscroll
+const image__view__ele = document.querySelectorAll(".img__view");
+
+window.addEventListener("scroll", () => {
+	image__view__ele.forEach(ele => {
+		let ele__height = ele.getBoundingClientRect().top;
+		let win__height = window.innerHeight / 2;
+		if (Math.floor(ele__height) <= (Math.round(win__height))) {
+			ele.style.opacity = `${1}`;
+			ele.style.transition = `${1000}ms ease-in-out`;
+			ele.style.transform = `translateY(${0}px)`;
+		} else {
+			ele.style.opacity = `${0}`;
+			ele.style.transition = `${1000}ms ease-in-out`;
+			ele.style.transform = `translateY(${25}px)`;
+		}
+	})
+})

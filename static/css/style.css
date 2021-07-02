@@ -332,6 +332,11 @@ section {
     height: 480px;
   }
 
+  .img__view {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
   .cover__content {
     width: 75%;
     margin: 0 auto;
