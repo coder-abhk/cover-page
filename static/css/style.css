@@ -2,6 +2,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -181,7 +182,8 @@ main {
   cursor: pointer;
 }
 
-#slide__handler__btn:active {
+#slide__handler__btn:active,
+#modal__close__button:active {
   opacity: 0.75;
 }
 
@@ -264,6 +266,7 @@ section {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative;
 }
 
 .poster>.label {
@@ -304,8 +307,80 @@ section {
   background-color: #ffecd3;
 }
 
+.cover__issue__modal {
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFEAFE;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#modal__close__button {
+  width: 100px;
+  height: 53px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.modal__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.modal__content>h1 {
+  font-size: 22px;
+  word-spacing: 5px;
+  font-family: "Nanum Brush Script", cursive !important;
+}
+
+.email__subscription {
+  margin-top: 1em;
+}
+
+input[type="email"],
+input[type="submit"] {
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-family: "Zen Loop", cursive !important;
+  font-weight: bold;
+
+}
+
+input[type="email"] {
+  border: 1px solid #000;
+  padding: .3em .5em;
+}
+
+input[type="submit"] {
+  color: #fafafa;
+  border: 1px solid #000;
+  background-color: #000;
+  padding: .3em .5em;
+  cursor: pointer;
+  margin-left: 3px;
+  text-transform: uppercase;
+  transition: background-color 300ms, color 300ms;
+}
+
+input[type="submit"]:hover {
+  color: #000;
+  background-color: #FFECD3;
+}
+
 /*media screen 768px*/
-@media only screen and (min-width: 760px) {
+@media only screen and (min-width: 768px) {
   main {
     height: 480px;
   }
@@ -351,6 +426,15 @@ section {
     word-spacing: 5px;
     line-height: 38px;
   }
+
+  .modal__content>h1 {
+    font-size: 34px;
+  }
+
+  input[type="email"],
+  input[type="submit"] {
+    font-size: 22px;
+  }
 }
 
 /*desktop screen*/
@@ -389,5 +473,14 @@ section {
 
   .cover__content em {
     font-size: 20px;
+  }
+
+  .modal__content>h1 {
+    font-size: 44px;
+  }
+
+  input[type="email"],
+  input[type="submit"] {
+    font-size: 28px;
   }
 }

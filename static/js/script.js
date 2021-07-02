@@ -31,8 +31,11 @@ slide__handler__btn.addEventListener("click", () => {
 	slideHandler()
 }, false);
 
+
+// nav handler
 var isTransformed = true;
-hamburger.addEventListener("click", () => {
+
+function navTransformHandler() {
 	if (isTransformed) {
 		nav__slider.style.opacity = `${1}`;
 		nav__slider.style.marginLeft = `${0}px`;
@@ -48,13 +51,15 @@ hamburger.addEventListener("click", () => {
 		hamburgerLine2.style.marginTop = `${3}px`;
 		isTransformed = true;
 	}
-}, false);
+}
+
+hamburger.addEventListener("click", navTransformHandler, false);
 
 
 // images view effect onscroll
 const image__view__ele = document.querySelectorAll(".img__view");
 
-window.addEventListener("scroll", () => {
+function imageViewHandler() {
 	image__view__ele.forEach(ele => {
 		let ele__height = ele.getBoundingClientRect().top;
 		let win__height = window.innerHeight / 2;
@@ -68,4 +73,23 @@ window.addEventListener("scroll", () => {
 			ele.style.transform = `translateY(${25}px)`;
 		}
 	})
-})
+}
+
+window.addEventListener("scroll", imageViewHandler, false)
+
+
+// cover modal handler
+const cover__your__success__button = document.getElementById("cover__your__success__button");
+const modal__close__button = document.getElementById("modal__close__button");
+const cover__issue__modal = document.querySelector(".cover__issue__modal");
+
+function openModalHandler() {
+	cover__issue__modal.style.display = "flex";
+}
+
+function closeModalHandler() {
+	cover__issue__modal.style.display = "none";
+}
+
+cover__your__success__button.addEventListener("click", openModalHandler, false)
+modal__close__button.addEventListener("click", closeModalHandler, false);
